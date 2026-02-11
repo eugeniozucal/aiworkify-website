@@ -7,15 +7,20 @@ import { Features } from './components/Features';
 import { Integrations } from './components/Integrations';
 import { Footer } from './components/Footer';
 
-// --- Text Logos for Social Proof ---
-const Logos = {
-   Disney: () => <span className="text-2xl font-serif font-bold text-gray-400">Disney</span>,
-   Bayer: () => <span className="text-2xl font-sans font-bold text-gray-400 tracking-tight">BAYER</span>,
-   CocaCola: () => <span className="text-2xl font-serif font-bold text-gray-400">Coca-Cola</span>,
-   Mercedes: () => <span className="text-xl font-serif font-bold text-gray-400">Mercedes-Benz</span>,
-   DLocal: () => <span className="text-xl font-sans font-bold text-gray-400">dLocal</span>,
-   Zenodro: () => <span className="text-xl font-sans font-bold text-gray-400 tracking-wider">ZENODRO</span>,
-}
+// --- Trust Logos for Infinite Carousel ---
+const TRUST_LOGOS = [
+  'https://aiworkify.com/images/01.png',
+  'https://aiworkify.com/images/02.png',
+  'https://aiworkify.com/images/03.png',
+  'https://aiworkify.com/images/04.png',
+  'https://aiworkify.com/images/05.png',
+  'https://aiworkify.com/images/06.png',
+  'https://aiworkify.com/images/07.png',
+  'https://aiworkify.com/images/08.png',
+  'https://aiworkify.com/images/09.png',
+  'https://aiworkify.com/images/10.png',
+  'https://aiworkify.com/images/11.png',
+];
 
 // Architecture Component
 const Architecture = () => (
@@ -158,19 +163,9 @@ function App() {
         )}
       </nav>
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 md:pt-48 md:pb-24 px-4 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-50 via-white to-white">
-        <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10 px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center bg-white border border-gray-200 shadow-[0_2px_10px_rgba(0,0,0,0.06)] rounded-full pl-1 pr-3 py-1 mb-6 hover:border-gray-300 transition-colors cursor-pointer group"
-          >
-             <span className="px-2.5 py-0.5 rounded-full bg-blue-100 border border-blue-200 text-[10px] font-bold text-blue-700 uppercase tracking-wide group-hover:bg-blue-200 transition-colors mr-2">New</span>
-             <span className="text-xs text-gray-500 flex items-center font-medium">Read the State of Enterprise AI Report <ChevronRight size={12} className="ml-1 text-gray-400 group-hover:text-gray-600" /></span>
-          </motion.div>
-          
+      {/* Section 1: Hero Claim */}
+      <section className="pt-32 pb-20 md:pt-48 md:pb-28 px-4 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-50 via-white to-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10 px-4"> 
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -189,34 +184,40 @@ function App() {
           >
             The gap between buying AI tools and building an AI-native culture is where transformation fails. We partner with ambitious enterprises to embed artificial intelligence into the core of operations.
           </motion.p>
-          
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4 pt-6"
-          >
-            <Button size="lg" className="w-full sm:w-auto h-11 px-8 text-sm font-semibold bg-black hover:bg-gray-800 shadow-xl transition-all hover:scale-105 active:scale-100">Start the Assessment</Button>
-            <Button variant="secondary" size="lg" className="w-full sm:w-auto h-11 px-8 text-sm font-semibold hover:bg-gray-50 transition-all hover:scale-105 active:scale-100">Explore Venture Studio</Button>
-          </motion.div>
         </div>
+      </section>
 
-        {/* Hero Dashboard Preview */}
+      {/* Section 2: Visual Proof / Dashboard */}
+      <section className="py-20 bg-white border-b border-gray-50">
         <HeroDashboard />
       </section>
 
-      {/* Social Proof - Trust Section */}
-      <section className="py-20 border-b border-gray-100 bg-white">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-8">Trusted by Market Leaders</p>
-           <div className="flex flex-wrap justify-center items-center gap-x-12 lg:gap-x-20 gap-y-12 opacity-60 hover:opacity-100 transition-all duration-500 grayscale hover:grayscale-0">
-              <Logos.Disney />
-              <Logos.Bayer />
-              <Logos.CocaCola />
-              <Logos.Mercedes />
-              <Logos.DLocal />
-              <Logos.Zenodro />
-           </div>
+      {/* Social Proof - Infinite Trust Carousel */}
+      <section className="py-20 border-b border-gray-100 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 text-center mb-10">
+            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Trusted by Market Leaders</p>
+        </div>
+        <div className="relative flex overflow-hidden">
+          <motion.div 
+            className="flex space-x-20 items-center whitespace-nowrap px-10"
+            animate={{ x: [0, -1920 * 4] }} // Adjusted for 2x larger logos (4x total effective width)
+            transition={{ 
+              duration: 80, // Halved duration for 2x faster speed
+              repeat: Infinity, 
+              ease: "linear",
+              repeatType: "loop"
+            }}
+          >
+            {/* Duplicate logos multiple times to ensure seamless loop effect */}
+            {[...TRUST_LOGOS, ...TRUST_LOGOS, ...TRUST_LOGOS, ...TRUST_LOGOS, ...TRUST_LOGOS, ...TRUST_LOGOS].map((src, idx) => ( // Added more duplicates to cover potential overflow with larger logos
+              <img 
+                key={idx} 
+                src={src} 
+                alt="Partner Logo" 
+                className="h-40 w-auto object-contain opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300" 
+              />
+            ))}
+          </motion.div>
         </div>
       </section>
 
