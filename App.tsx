@@ -118,10 +118,8 @@ function App() {
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-10">
               <a href="#" className="flex items-center space-x-2 group">
-                <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center group-hover:bg-blue-600 transition-colors shadow-sm">
-                   <div className="w-3.5 h-3.5 bg-white rounded-full"></div>
-                </div>
-                <span className="font-bold text-xl tracking-tight hidden sm:block">Ai Workify</span>
+                <img src="http://aiworkify.com/images/logo.png" alt="Ai Workify" className="h-8 w-auto object-contain" />
+                {/* Removed 'Ai Workify' text as it's part of the logo image */}
               </a>
               <div className="hidden md:flex items-center space-x-8">
                 <a href="#" className="text-sm font-medium text-gray-600 hover:text-black transition-colors">Product</a>
