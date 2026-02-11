@@ -179,7 +179,7 @@ export const StrategicTaxFeature = () => {
                            <p className="mb-3">Based on the <strong>Global Mobility Policy (updated Oct 2023)</strong>:</p>
                            <ul className="list-disc pl-4 space-y-1 mb-3">
                               <li>You can work internationally for up to <strong>30 days</strong> without triggering a tax event in most jurisdictions.</li>
-                              <li>For durations > 2 weeks, you must log a request in BambooHR for compliance review.</li>
+                              <li>For durations &gt; 2 weeks, you must log a request in BambooHR for compliance review.</li>
                            </ul>
                            <p className="text-xs text-gray-500 italic">Source: HR Handbook v4.2 • Verified by Global Compliance</p>
                            
