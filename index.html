@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,6 +34,9 @@
       /* Hide scrollbar for clean horizontal scrolling if needed */
       .no-scrollbar::-webkit-scrollbar { display: none; }
       .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      
+      /* Ensure smooth transitions for layout shifts */
+      .scroll-smooth { scroll-behavior: smooth; }
     </style>
   <script type="importmap">
 {

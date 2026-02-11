@@ -115,35 +115,42 @@ function App() {
       {/* Sticky Navbar */}
       <nav className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md border-b border-gray-200 py-3' : 'bg-transparent py-5'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-10">
+          {/* 3-Column Grid for Centered Links */}
+          <div className="grid grid-cols-2 md:grid-cols-3 items-center">
+            {/* Logo Column */}
+            <div className="flex justify-start">
               <a href="#" className="flex items-center space-x-2 group">
                 <img src="http://aiworkify.com/images/logo.png" alt="Ai Workify" className="h-8 w-auto object-contain" />
-                {/* Removed 'Ai Workify' text as it's part of the logo image */}
               </a>
-              <div className="hidden md:flex items-center space-x-8">
-                <a href="#" className="text-sm font-medium text-gray-600 hover:text-black transition-colors">Product</a>
-                <a href="#" className="text-sm font-medium text-gray-600 hover:text-black transition-colors">Solutions</a>
-                <a href="#" className="text-sm font-medium text-gray-600 hover:text-black transition-colors">Venture Studio</a>
-                <a href="#" className="text-sm font-medium text-gray-600 hover:text-black transition-colors">Resources</a>
+            </div>
+
+            {/* Links Column (Centered) */}
+            <div className="hidden md:flex justify-center items-center space-x-8">
+              <a href="#product" className="text-sm font-medium text-gray-600 hover:text-black transition-colors">Product</a>
+              <a href="#solutions" className="text-sm font-medium text-gray-600 hover:text-black transition-colors">Solutions</a>
+              <a href="#venture-studio" className="text-sm font-medium text-gray-600 hover:text-black transition-colors">Venture Studio</a>
+              <a href="#resources" className="text-sm font-medium text-gray-600 hover:text-black transition-colors">Resources</a>
+            </div>
+
+            {/* CTA Column */}
+            <div className="flex justify-end items-center space-x-4">
+              <div className="hidden md:block">
+                <Button size="sm" className="bg-black text-white hover:bg-gray-800 px-5 py-2 h-9 text-sm font-medium shadow-lg hover:shadow-xl transition-all">Partner with Us</Button>
               </div>
+              <button className="md:hidden text-gray-600 p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+                {mobileMenuOpen ? <X /> : <Menu />}
+              </button>
             </div>
-            <div className="hidden md:flex items-center space-x-4">
-              <Button size="sm" className="bg-black text-white hover:bg-gray-800 px-5 py-2 h-9 text-sm font-medium shadow-lg hover:shadow-xl transition-all">Partner with Us</Button>
-            </div>
-            <button className="md:hidden text-gray-600 p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-              {mobileMenuOpen ? <X /> : <Menu />}
-            </button>
           </div>
         </div>
         
         {/* Mobile Menu */}
         {mobileMenuOpen && (
            <div className="absolute top-full left-0 right-0 bg-white border-b border-gray-200 p-6 md:hidden flex flex-col space-y-4 shadow-2xl z-50">
-              <a href="#" className="text-base font-medium text-gray-900 py-2 border-b border-gray-50">Product</a>
-              <a href="#" className="text-base font-medium text-gray-900 py-2 border-b border-gray-50">Solutions</a>
-              <a href="#" className="text-base font-medium text-gray-900 py-2 border-b border-gray-50">Venture Studio</a>
-              <a href="#" className="text-base font-medium text-gray-900 py-2 border-b border-gray-50">Resources</a>
+              <a href="#product" onClick={() => setMobileMenuOpen(false)} className="text-base font-medium text-gray-900 py-2 border-b border-gray-50">Product</a>
+              <a href="#solutions" onClick={() => setMobileMenuOpen(false)} className="text-base font-medium text-gray-900 py-2 border-b border-gray-50">Solutions</a>
+              <a href="#venture-studio" onClick={() => setMobileMenuOpen(false)} className="text-base font-medium text-gray-900 py-2 border-b border-gray-50">Venture Studio</a>
+              <a href="#resources" onClick={() => setMobileMenuOpen(false)} className="text-base font-medium text-gray-900 py-2 border-b border-gray-50">Resources</a>
               <div className="pt-6 mt-2 flex flex-col space-y-3">
                  <Button className="w-full justify-center h-10">Partner with Us</Button>
               </div>
@@ -214,7 +221,7 @@ function App() {
       </section>
 
       {/* Value Prop 1: Mission Control */}
-      <section className="py-32 bg-white overflow-hidden border-b border-gray-100">
+      <section id="product" className="py-32 bg-white overflow-hidden border-b border-gray-100">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             
             {/* Left Content */}
@@ -304,7 +311,7 @@ function App() {
       <Integrations />
 
       {/* Stats Section */}
-      <section className="py-24 bg-white">
+      <section id="resources" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="mb-16 max-w-2xl">
               <h2 className="text-4xl font-bold tracking-tight text-gray-900 mb-6">Proven Impact</h2>

@@ -23,7 +23,7 @@ const SubFeatureGrid = ({ items }: { items: { icon: React.ReactNode, title: stri
 
 export const MethodologyFeature = () => {
   return (
-    <div className="py-32 border-b border-gray-100">
+    <div id="solutions" className="py-32 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
            <div className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 mb-6 border border-blue-100">
