@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
               <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
                  The future belongs to those with the neuroplasticity to orchestrate operations between digital agents and creative humans.
               </p>
-              <Button className="bg-white text-black hover:bg-gray-100 text-lg px-8 py-4 h-auto shadow-xl border-none">
+              <Button className="bg-black text-white hover:bg-gray-800 text-lg px-8 py-4 h-auto shadow-xl border border-blue-900/30">
                  Partner with Ai Workify
               </Button>
            </div>

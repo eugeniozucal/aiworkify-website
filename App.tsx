@@ -164,15 +164,15 @@ function App() {
       </nav>
 
       {/* Section 1: Hero Claim */}
-      <section className="pt-32 pb-20 md:pt-48 md:pb-28 px-4 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-50 via-white to-white border-b border-gray-100">
-        <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10 px-4"> 
+      <section className="pt-24 pb-20 md:pt-48 md:pb-32 px-4 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-50 via-white to-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto text-center space-y-8 md:space-y-10 relative z-10 px-4"> 
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-5xl md:text-[5rem] font-extrabold tracking-[-0.03em] text-gray-900 leading-[1.05] pb-2"
+            className="text-4xl sm:text-5xl md:text-[5rem] font-extrabold tracking-[-0.03em] text-gray-900 leading-[1.1] md:leading-[1.05] pb-2"
           >
-            Don't Architect Your <br/>
+            Don't Architect Your <br className="hidden sm:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-500">Own Obsolescence.</span>
           </motion.h1>
           
@@ -180,15 +180,26 @@ function App() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed px-4"
           >
             The gap between buying AI tools and building an AI-native culture is where transformation fails. We partner with ambitious enterprises to embed artificial intelligence into the core of operations.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex justify-center pt-4"
+          >
+            <Button size="lg" className="bg-black text-white hover:bg-gray-800 px-8 py-4 h-auto text-lg font-bold shadow-2xl transition-all">
+              Partner with Us
+            </Button>
+          </motion.div>
         </div>
       </section>
 
       {/* Section 2: Visual Proof / Dashboard */}
-      <section className="py-20 bg-white border-b border-gray-50">
+      <section className="pt-12 pb-20 md:pt-20 md:pb-32 bg-white border-b border-gray-50">
         <HeroDashboard />
       </section>
 
@@ -239,7 +250,7 @@ function App() {
                      Operational fragmentation is the primary barrier to scale. Your intelligence is currently scattered across incompatible platforms—spreadsheets, ERPs, and chat logs—forcing you to rely on manual "human glue."
                   </p>
                   <p>
-                     We build proprietary operational assets, like <strong>Zenodro Mission Control</strong>, that unify your data. We replace "rented insights" with absolute dominion over your business logic.
+                     We build proprietary operational assets, like <strong>Mission Control</strong>, that unify your data. We replace "rented insights" with absolute dominion over your business logic.
                   </p>
                </div>
             </div>
