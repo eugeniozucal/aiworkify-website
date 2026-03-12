@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12 border-t border-gray-100 pt-16">
           <div className="col-span-2">
              <div className="flex items-center space-x-2 mb-4">
-                <img src="http://aiworkify.com/images/logo.png" alt="Ai Workify" className="h-8 w-auto object-contain" />
+                <img src="http://images.aiworkify.com/aiworkify-website/logo.png" alt="Ai Workify" className="h-8 w-auto object-contain" />
                 {/* Removed 'Ai Workify' text as it's part of the logo image */}
              </div>
              <p className="text-gray-500 text-sm max-w-xs leading-relaxed">
