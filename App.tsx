@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll } from 'framer-motion';
 import { Menu, X, ChevronRight, Shield, Zap, Database, Server, Layers, Lock, Cpu, Users, Activity } from 'lucide-react';
-import { Button } from './components/Button';
 import { HeroDashboard } from './components/HeroDashboard';
 import { Features } from './components/Features';
 import { Integrations } from './components/Integrations';
@@ -125,7 +124,7 @@ function App() {
             {/* Logo Column */}
             <div className="flex justify-start">
               <a href="#" className="flex items-center space-x-2 group">
-                <img src="http://aiworkify.com/images/logo.png" alt="Ai Workify" className="h-8 w-auto object-contain" />
+                <img src="http://images.aiworkify.com/aiworkify-website/logo.png" alt="Ai Workify" className="h-8 w-auto object-contain" />
               </a>
             </div>
 
@@ -139,9 +138,6 @@ function App() {
 
             {/* CTA Column */}
             <div className="flex justify-end items-center space-x-4">
-              <div className="hidden md:block">
-                <Button size="sm" className="bg-black text-white hover:bg-gray-800 px-5 py-2 h-9 text-sm font-medium shadow-lg hover:shadow-xl transition-all">Partner with Us</Button>
-              </div>
               <button className="md:hidden text-gray-600 p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                 {mobileMenuOpen ? <X /> : <Menu />}
               </button>
@@ -156,9 +152,6 @@ function App() {
               <a href="#solutions" onClick={() => setMobileMenuOpen(false)} className="text-base font-medium text-gray-900 py-2 border-b border-gray-50">Solutions</a>
               <a href="#venture-studio" onClick={() => setMobileMenuOpen(false)} className="text-base font-medium text-gray-900 py-2 border-b border-gray-50">Venture Studio</a>
               <a href="#resources" onClick={() => setMobileMenuOpen(false)} className="text-base font-medium text-gray-900 py-2 border-b border-gray-50">Resources</a>
-              <div className="pt-6 mt-2 flex flex-col space-y-3">
-                 <Button className="w-full justify-center h-10">Partner with Us</Button>
-              </div>
            </div>
         )}
       </nav>
@@ -185,16 +178,6 @@ function App() {
             The gap between buying AI tools and building an AI-native culture is where transformation fails. We partner with ambitious enterprises to embed artificial intelligence into the core of operations.
           </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex justify-center pt-4"
-          >
-            <Button size="lg" className="bg-black text-white hover:bg-gray-800 px-8 py-4 h-auto text-lg font-bold shadow-2xl transition-all">
-              Partner with Us
-            </Button>
-          </motion.div>
         </div>
       </section>
 
@@ -292,25 +275,6 @@ function App() {
                       </div>
                    </div>
 
-                   {/* Floating "Red/Green" Card */}
-                   <motion.div 
-                     animate={{ y: [0, -10, 0] }}
-                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                     className="absolute -right-6 bottom-10 bg-white p-4 rounded-xl shadow-2xl border border-gray-100 w-40"
-                   >
-                      <div className="flex justify-between items-center mb-2">
-                         <span className="text-xs font-bold text-gray-500">Performance</span>
-                         <span className="w-2 h-2 rounded-full bg-green-500"></span>
-                      </div>
-                      <div className="flex gap-1 mb-1">
-                         <div className="h-8 w-2 bg-green-500 rounded-sm"></div>
-                         <div className="h-8 w-2 bg-green-500 rounded-sm"></div>
-                         <div className="h-8 w-2 bg-green-500 rounded-sm"></div>
-                         <div className="h-8 w-2 bg-green-500 rounded-sm"></div>
-                         <div className="h-8 w-2 bg-gray-200 rounded-sm"></div>
-                      </div>
-                      <div className="text-xs font-mono text-gray-400">Last 24h</div>
-                   </motion.div>
                 </div>
             </div>
          </div>

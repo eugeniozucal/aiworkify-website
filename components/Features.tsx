@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { BrainCircuit, Workflow, Zap, ArrowRight, MessageSquare, Terminal, ShieldCheck, Users, LineChart, Layers, ChevronRight } from 'lucide-react';
-import { Button } from './Button';
 
 // --- Sub-Components ---
 
@@ -39,38 +38,10 @@ export const MethodologyFeature = () => {
         <div className="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden relative p-8 mb-16">
            <div className="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:24px_24px] opacity-40"></div>
            
-           <div className="relative z-10 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-              
-              {/* Step 1 */}
-              <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 relative group hover:border-blue-300 transition-all">
-                 <div className="absolute -top-3 -left-3 w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center font-bold shadow-lg">1</div>
-                 <div className="mb-4 text-blue-600 bg-blue-50 w-12 h-12 rounded-full flex items-center justify-center">
-                    <BrainCircuit size={24} />
-                 </div>
-                 <h3 className="text-lg font-bold text-gray-900 mb-2">Agentic Assessment</h3>
-                 <p className="text-sm text-gray-500">We map individual friction points using AI diagnostic agents to identify high-value automation targets.</p>
-                 
-                 {/* Chat Bubble Mockup */}
-                 <div className="mt-4 bg-gray-50 rounded-lg p-3 border border-gray-100 text-xs space-y-2">
-                    <div className="flex gap-2">
-                       <div className="w-4 h-4 rounded-full bg-blue-600 shrink-0"></div>
-                       <div className="bg-white p-2 rounded-r-lg rounded-bl-lg shadow-sm text-gray-700">Where do you spend the most time on repetitive tasks?</div>
-                    </div>
-                    <div className="flex gap-2 flex-row-reverse">
-                       <div className="w-4 h-4 rounded-full bg-gray-400 shrink-0"></div>
-                       <div className="bg-blue-100 p-2 rounded-l-lg rounded-br-lg text-blue-900">Copy-pasting data from Email to the ERP.</div>
-                    </div>
-                 </div>
-              </div>
-
-              {/* Arrow */}
-              <div className="hidden md:flex justify-center text-gray-300">
-                 <ChevronRight size={32} />
-              </div>
-
+           <div className="relative z-10 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 items-center">
               {/* Step 2 */}
               <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 relative group hover:border-blue-300 transition-all">
-                 <div className="absolute -top-3 -left-3 w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center font-bold shadow-lg">2</div>
+                 <div className="absolute -top-3 -left-3 w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center font-bold shadow-lg">1</div>
                  <div className="mb-4 text-purple-600 bg-purple-50 w-12 h-12 rounded-full flex items-center justify-center">
                     <Workflow size={24} />
                  </div>
@@ -91,7 +62,7 @@ export const MethodologyFeature = () => {
 
               {/* Step 3 */}
               <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 relative group hover:border-blue-300 transition-all">
-                 <div className="absolute -top-3 -left-3 w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center font-bold shadow-lg">3</div>
+                 <div className="absolute -top-3 -left-3 w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center font-bold shadow-lg">2</div>
                  <div className="mb-4 text-green-600 bg-green-50 w-12 h-12 rounded-full flex items-center justify-center">
                     <Zap size={24} />
                  </div>

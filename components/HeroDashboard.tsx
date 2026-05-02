@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Activity, Shield, Cpu, Lock, Terminal, BarChart3, CheckCircle2, AlertCircle, Clock, Server, UserCheck } from 'lucide-react';
-import { Button } from './Button';
 
 type TabType = 'health' | 'activity' | 'audit';
 
@@ -298,19 +297,6 @@ export const HeroDashboard: React.FC = () => {
           </div>
         </div>
         
-        {/* Floating Callout Overlay */}
-        <div className="absolute bottom-6 left-6 right-6 md:left-auto md:right-auto md:w-[420px] md:bottom-6 md:left-6 bg-[#0A192F] text-white p-4 rounded-xl shadow-2xl flex items-center justify-between z-20 animate-fade-in-up border border-blue-900/50" style={{animationDelay: '0.3s'}}>
-           <div className="flex items-center space-x-4">
-              <div className="p-2.5 bg-blue-600/20 rounded-lg border border-blue-500/30 text-blue-400">
-                 <Activity className="w-5 h-5" />
-              </div>
-              <div className="flex flex-col">
-                 <h4 className="text-sm font-semibold tracking-tight text-white">System Sovereignty</h4>
-                 <p className="text-[10px] md:text-xs text-gray-400 mt-0.5 font-medium">Your data. Your logic. Your control.</p>
-              </div>
-           </div>
-           <Button variant="primary" size="sm" className="hidden sm:inline-flex bg-black text-white hover:bg-gray-800 border-none h-8 text-xs font-semibold px-3">View Report</Button>
-        </div>
       </div>
     </div>
   );
