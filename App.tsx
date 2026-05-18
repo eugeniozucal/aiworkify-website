@@ -8,17 +8,17 @@ import { Footer } from './components/Footer';
 
 // --- Trust Logos for Infinite Carousel ---
 const TRUST_LOGOS = [
-  'https://aiworkify.com/images/01.png',
-  'https://aiworkify.com/images/02.png',
-  'https://aiworkify.com/images/03.png',
-  'https://aiworkify.com/images/04.png',
-  'https://aiworkify.com/images/05.png',
-  'https://aiworkify.com/images/06.png',
-  'https://aiworkify.com/images/07.png',
-  'https://aiworkify.com/images/08.png',
-  'https://aiworkify.com/images/09.png',
-  'https://aiworkify.com/images/10.png',
-  'https://aiworkify.com/images/11.png',
+  'https://images.aiworkify.com/aiworkify-website/01.png',
+  'https://images.aiworkify.com/aiworkify-website/02.png',
+  'https://images.aiworkify.com/aiworkify-website/03.png',
+  'https://images.aiworkify.com/aiworkify-website/04.png',
+  'https://images.aiworkify.com/aiworkify-website/05.png',
+  'https://images.aiworkify.com/aiworkify-website/06.png',
+  'https://images.aiworkify.com/aiworkify-website/07.png',
+  'https://images.aiworkify.com/aiworkify-website/08.png',
+  'https://images.aiworkify.com/aiworkify-website/09.png',
+  'https://images.aiworkify.com/aiworkify-website/10.png',
+  'https://images.aiworkify.com/aiworkify-website/11.png',
 ];
 
 // Architecture Component
